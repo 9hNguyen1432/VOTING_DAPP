@@ -6,7 +6,7 @@ const VoteScreen = ({ candidates, onVoteClick }) => {
   const [lisCandidates, setListCandidates] = React.useState([]);
 
   const checkInStartAndEndTime = async (voteId) => {
-    return await votingContract.methods.getStart(voteId).call() && !await votingContract.methods.getEnd(voteId).call();
+    return await votingContract.methods.getStart(voteId) && !await votingContract.methods.getEnd(voteId).call();
   };
 
   const getVoteCandidate = async (voteId) => {

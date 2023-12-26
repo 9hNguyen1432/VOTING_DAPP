@@ -3,6 +3,10 @@ export const abi = [
 		"constant": false,
 		"inputs": [
 			{
+				"name": "_voteId",
+				"type": "uint256"
+			},
+			{
 				"name": "_id",
 				"type": "uint256"
 			},
@@ -73,6 +77,10 @@ export const abi = [
 		"constant": false,
 		"inputs": [
 			{
+				"name": "_id",
+				"type": "uint256"
+			},
+			{
 				"name": "candidateId",
 				"type": "uint256"
 			}
@@ -85,8 +93,13 @@ export const abi = [
 	},
 	{
 		"constant": true,
-		"inputs": [],
-		"name": "admin",
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getAdmin",
 		"outputs": [
 			{
 				"name": "",
@@ -101,54 +114,10 @@ export const abi = [
 		"constant": true,
 		"inputs": [
 			{
-				"name": "",
+				"name": "_id",
 				"type": "uint256"
 			}
 		],
-		"name": "candidates",
-		"outputs": [
-			{
-				"name": "ID",
-				"type": "uint256"
-			},
-			{
-				"name": "name",
-				"type": "string"
-			},
-			{
-				"name": "age",
-				"type": "uint256"
-			},
-			{
-				"name": "description",
-				"type": "string"
-			},
-			{
-				"name": "voteCount",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "getAdmin",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
 		"name": "getEnd",
 		"outputs": [
 			{
@@ -162,7 +131,12 @@ export const abi = [
 	},
 	{
 		"constant": true,
-		"inputs": [],
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
 		"name": "getStart",
 		"outputs": [
 			{
@@ -176,7 +150,12 @@ export const abi = [
 	},
 	{
 		"constant": true,
-		"inputs": [],
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
 		"name": "getTotalVoter",
 		"outputs": [
 			{
@@ -190,7 +169,12 @@ export const abi = [
 	},
 	{
 		"constant": true,
-		"inputs": [],
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
 		"name": "viewCandidatesList",
 		"outputs": [
 			{
@@ -218,25 +202,6 @@ export const abi = [
 				],
 				"name": "",
 				"type": "tuple[]"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "voters",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address"
 			}
 		],
 		"payable": false,

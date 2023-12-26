@@ -29,7 +29,7 @@ function App() {
   }
 
   async function getVoteCount() {
-    const voteCount = await votingContract.methods.viewCandidatesList().call();
+    const voteCount = await votingContract.methods.viewCandidatesList(0).call();
     console.log("vote count: ", voteCount);
   }
 
